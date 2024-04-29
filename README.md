@@ -5,7 +5,7 @@ Captcha Validator for FastAPI
 ## Install
 
 ```bash
-pip install fast_captchax
+pip install fast-captchax
 ```
 
 ## Usage
