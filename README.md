@@ -18,7 +18,7 @@ from fastapi import FastAPI
 from fast_captchax import captcha
 from fast_captchax.memory import MemoryCapatchStore
 from fast_captchax.redis import RedisCapatchStore
-from captchax import create_image
+from fast_captchax.captchax import CaptchaXGenerator
 
 validate, captcha_router = captcha(
     generator = CaptchaXGenerator(),
@@ -84,9 +84,9 @@ Please use
 from datetime import timedelta
 from fastapi import FastAPI
 from fast_captchax import async_captcha
-from captchax import create_image
 from fast_captchax.memory import AsyncMemoryCapatchStore
 from fast_captchax.redis import AsyncRedisCapatchStore
+from fast_captchax.captchax import CaptchaXGenerator
 
 async def async_create_image():
     return await asyncio.to_thread(CaptchaXGenerator())
